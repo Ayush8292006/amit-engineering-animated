@@ -49,7 +49,7 @@ const HeroSlider = () => {
   }, [i, n]);
 
   return (
-    <section className="relative bg-navy-dark h-[680px] sm:h-[620px] md:h-[660px] overflow-hidden">
+    <section className="relative bg-navy-dark h-[560px] md:h-[620px] overflow-hidden">
       {SLIDES.map((s, idx) => (
         <div
           key={s.image}
@@ -61,7 +61,7 @@ const HeroSlider = () => {
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-navy-dark/95 via-navy-dark/75 to-navy-dark/30" />
           <div className="relative wrap h-full flex items-center">
-            <div className="max-w-2xl pt-6 pb-44 md:pt-0 md:pb-48">
+            <div className="max-w-2xl pb-16 md:pb-10">
               <span className={`${idx === i ? 'enter-left' : ''} inline-block bg-orange text-white font-heading text-[13px] font-semibold uppercase tracking-wider px-3 py-1 mb-5`} style={{ '--d': '150ms' }}>
                 {s.kicker}
               </span>
@@ -78,7 +78,7 @@ const HeroSlider = () => {
         </div>
       ))}
 
-      <div className="absolute bottom-24 md:bottom-28 left-0 right-0 z-20">
+      <div className="absolute bottom-24 md:bottom-28 left-0 right-0">
         <div className="enter-fade wrap flex items-center gap-3" style={{ '--d': '900ms' }}>
           <button onClick={() => setI((i - 1 + n) % n)} className="w-10 h-10 border border-white/40 text-white flex items-center justify-center hover:bg-orange hover:border-orange active:scale-90 transition-all duration-200" aria-label="Previous slide">
             <ChevronLeft size={18} />
